@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Workshop Unity.sln"
+    "dotnet.defaultSolution": "Workshop_Unity_2rdYear_MathysM.sln"
 }
