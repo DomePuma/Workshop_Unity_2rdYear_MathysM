@@ -1,5 +1,3 @@
-using System.ComponentModel;
-using Unity.Collections;
 using UnityEngine;
 
 public class CollectiblesObject : MonoBehaviour
@@ -24,29 +22,45 @@ public class CollectiblesObject : MonoBehaviour
 [System.Serializable]
 public class Items
 {   
-    public ObjectType ItemType
+    internal ObjectType itemType;
+
+    private bool hasAType = false;
+    internal ObjectType ItemType
     {
         get => Main();
     }
     internal ObjectType Main()
     {
+        if (hasAType)
+        {
+            return itemType;
+        }
+
+        hasAType = true;
         int i = UnityEngine.Random.Range(0,6);
         switch(i)
         {
             case 0:
-            return ObjectType.Wheat;
+                itemType = ObjectType.Wheat;
+                return ObjectType.Wheat;
             case 1:
-            return ObjectType.Wood;
+                itemType = ObjectType.Wood;
+                return ObjectType.Wood;
             case 2:
-            return ObjectType.Rock;
+                itemType = ObjectType.Rock;
+                return ObjectType.Rock;
             case 3:
-            return ObjectType.Iron;
+                itemType = ObjectType.Iron;
+                return ObjectType.Iron;
             case 4:
-            return ObjectType.Gold;
+                itemType = ObjectType.Gold;
+                return ObjectType.Gold;
             case 5:
-            return ObjectType.Diamond;
+                itemType = ObjectType.Diamond;
+                return ObjectType.Diamond;
             default :
-            return ObjectType.Wheat;
+                itemType = ObjectType.Wheat;
+                return ObjectType.Wheat;
         }
     }
     public enum ObjectType
