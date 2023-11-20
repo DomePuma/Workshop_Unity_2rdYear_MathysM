@@ -5,8 +5,11 @@ using UnityEngine;
 public class GenerateItems : MonoBehaviour
 {
     [SerializeField] private GameObject prefab_Object;
-    void Start()
+    void Update()
     {
-        Instantiate(prefab_Object);
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(prefab_Object);
+        }
     }
 }
