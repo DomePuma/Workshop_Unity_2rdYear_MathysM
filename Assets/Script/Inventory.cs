@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private Items[] items = new Items[20];
-    private Items newestItem = null;
+    [SerializeField] private Items[] items;
+    private Items newestItem;
 
     public Items NewestItem
     {
@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     }
     private void Start() 
     {
+        items = new Items[20];
         for(int i = 0; i < items.Length; i++)
         {
             items[i] = null;
@@ -18,15 +19,15 @@ public class Inventory : MonoBehaviour
     }
     private void Update()
     {
-        if(newestItem != null)
+        if(newestItem.itemType != Items.ObjectType.NullType)
         {
             for(int i = 0; i < items.Length; i++)
             {
-                if(items[i] != null)
+                if(items[i].itemType == Items.ObjectType.NullType)
                 {
                     items[i] = newestItem;
-                    newestItem = null;
-                    Debug.Log(items[i].itemType);
+                    Debug.Log(items[i].itemType); 
+                    newestItem.itemType = Items.ObjectType.NullType;
                     break;
                 }
             }

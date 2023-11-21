@@ -92,6 +92,7 @@ public class Items
     }
     public enum ObjectType
     {
+        NullType,
         Coal,
         Iron,
         Gold,
