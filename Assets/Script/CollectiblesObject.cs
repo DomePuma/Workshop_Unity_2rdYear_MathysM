@@ -52,14 +52,16 @@ public class CollectiblesObject : MonoBehaviour
 [System.Serializable]
 public class Items
 {   
-    internal ObjectType itemType;
+    [SerializeField] internal ObjectType itemType;
 
     private bool hasAType = false;
+    
     internal ObjectType ItemType
     {
-        get => Main();
+        get => AssignType();
     }
-    internal ObjectType Main()
+
+    internal ObjectType AssignType()
     {
         if (hasAType)
         {
@@ -90,9 +92,9 @@ public class Items
                 return ObjectType.Coal;
         }
     }
+
     public enum ObjectType
     {
-        NullType,
         Coal,
         Iron,
         Gold,

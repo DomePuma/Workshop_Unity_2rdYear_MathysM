@@ -19,15 +19,15 @@ public class Inventory : MonoBehaviour
     }
     private void Update()
     {
-        if(newestItem.itemType != Items.ObjectType.NullType)
+        if(newestItem != null)
         {
             for(int i = 0; i < items.Length; i++)
             {
-                if(items[i].itemType == Items.ObjectType.NullType)
+                if(items[i] == null)
                 {
                     items[i] = newestItem;
                     Debug.Log(items[i].itemType); 
-                    newestItem.itemType = Items.ObjectType.NullType;
+                    newestItem = null;
                     break;
                 }
             }
