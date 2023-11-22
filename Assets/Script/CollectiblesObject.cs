@@ -1,42 +1,7 @@
-using Unity.Properties;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CollectiblesObject : MonoBehaviour
 {
-    private Items item = new Items();
-    
-    private Items.ObjectType itemType;
-    private Renderer objectRenderer;
-    private void Awake()
-    {
-        item = new Items();
-        itemType = item.ItemType;
-        objectRenderer = this.gameObject.GetComponent<Renderer>();
-    }
-    private void Start() 
-    {
-        switch(itemType)
-        {
-            case Items.ObjectType.Iron :
-                objectRenderer.material.SetColor("_BaseColor", Color.grey);
-                break;
-            case Items.ObjectType.Gold :
-                objectRenderer.material.SetColor("_BaseColor", Color.yellow);
-                break;
-            case Items.ObjectType.Emerald :
-                objectRenderer.material.SetColor("_BaseColor", Color.green);
-                break;
-            case Items.ObjectType.Ruby :
-                objectRenderer.material.SetColor("_BaseColor", Color.red);
-                break;
-            case Items.ObjectType.Diamond :
-                objectRenderer.material.SetColor("_BaseColor", Color.blue);
-                break;
-            default :
-                objectRenderer.material.SetColor("_BaseColor", Color.black);
-                break;
-        }
 
     }
     private void OnTriggerEnter(Collider other) 
