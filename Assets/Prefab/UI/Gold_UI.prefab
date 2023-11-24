@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6544772276713565370}
   - component: {fileID: 3815030148456179234}
   - component: {fileID: 9130947068779167062}
+  - component: {fileID: -9146671466727880903}
   m_Layer: 0
   m_Name: Gold_UI
   m_TagString: Untagged
@@ -88,4 +89,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109a9c000cb4da24c84e3ff72a989373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: b3d39039d14297142a882721a1a0cf9e, type: 2}
+--- !u!114 &-9146671466727880903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023014905152380079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16b1bde43d667545b13f0d498e371e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemType: 2
+  _itemTypeSource: {fileID: 5023014905152380079}

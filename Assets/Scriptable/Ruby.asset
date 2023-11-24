@@ -16,3 +16,5 @@ MonoBehaviour:
     type: 3}
   prefabUI: {fileID: 5023014905152380079, guid: 65187652cc0012148b307aea5e60ec11,
     type: 3}
+  prefabNextItemUI: {fileID: 5023014905152380079, guid: 5cec2de5d9437b346884a150118830dc,
+    type: 3}

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ItemData> itemList;
-
+    public List<GameObject> itemList;
+    
+    private GameObject[] itemInInventory = new GameObject[8];
     [SerializeField] GameObject[] itemInventoryParent;
 
     public static Action<bool> IsListFullAction;
@@ -15,6 +16,7 @@ public class Inventory : MonoBehaviour
     private bool isInventoryOpen;
     
     [SerializeField] private GameObject inventory;
+    GameObject _parentItem;
 
     public int maxItemNumber;
 
@@ -32,15 +34,15 @@ public class Inventory : MonoBehaviour
     {
         if(itemList.Count < maxItemNumber - 1)
         {
-            itemList.Add(itemData);
-            DisplayItem(itemData);
+            itemList.Add(itemData.prefabUI);
+            DisplayItem(itemData.prefabUI);
             IsListFullAction.Invoke(false);
 
         }
         else if(itemList.Count == maxItemNumber - 1)
         {
-            itemList.Add(itemData);
-            DisplayItem(itemData);
+            itemList.Add(itemData.prefabUI);
+            DisplayItem(itemData.prefabUI);
             IsListFullAction.Invoke(true);
         }
         else
@@ -48,6 +50,11 @@ public class Inventory : MonoBehaviour
             IsListFullAction.Invoke(true);
         }
     }
+    public void ReEnableInventory()
+    {
+        IsListFullAction.Invoke(false);
+    }
+
     
     private void Update() 
     {
@@ -63,13 +70,21 @@ public class Inventory : MonoBehaviour
         isInventoryOpen = !isInventoryOpen;
         inventory.SetActive(isInventoryOpen);
     }
-
-    private void DisplayItem(ItemData item)
+    
+    private void DisplayItem(GameObject item)
     {
-        GameObject newItem = Instantiate(item.prefabUI);
-        newItem.GetComponent<ScriptableHolder>().itemData = item;
-        newItem.transform.SetParent(itemInventoryParent[itemList.LastIndexOf(item)].transform);
+        
+        foreach (GameObject parentObject in itemInventoryParent)
+        {
+            if (parentObject.transform.childCount < 2)
+            {
+                _parentItem = parentObject;
+                break;
+            }
+        }
+        GameObject newItem = Instantiate(item);
+        newItem.transform.SetParent(_parentItem.transform);
         newItem.transform.localPosition = Vector3.zero;
-        newItem.transform.localScale = new Vector3(.7f, .7f, .7f);
+        newItem.transform.localScale = new Vector3(2f, 2f, 2f);
     }
 }

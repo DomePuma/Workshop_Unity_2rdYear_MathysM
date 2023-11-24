@@ -339,14 +339,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navMeshSurface: {fileID: 646317306}
   _waitTimeMin: 0
-  _waitTimeMax: 0
+  _waitTimeMax: 1
   _harvestableObjects:
   - {fileID: 11400000, guid: 3e7c866c3b8f30c418d55e48e8847101, type: 2}
-  - {fileID: 11400000, guid: 5ff7562720e3af943a66354093885ee1, type: 2}
-  - {fileID: 11400000, guid: b3d39039d14297142a882721a1a0cf9e, type: 2}
-  - {fileID: 11400000, guid: 620e18617b66f32468928e23ee18c4aa, type: 2}
-  - {fileID: 11400000, guid: ea095df554c9cb048898ea83cbb6c68c, type: 2}
-  - {fileID: 11400000, guid: b29373dce6abb094899e78a8f21a196e, type: 2}
 --- !u!4 &86550074
 Transform:
   m_ObjectHideFlags: 0
