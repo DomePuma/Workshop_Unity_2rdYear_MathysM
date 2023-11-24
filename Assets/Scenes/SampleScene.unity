@@ -305,7 +305,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 71356224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140fc9552e22ba54eac81f67669e980a, type: 3}
+  m_Script: {fileID: 11500000, guid: e7d5a71461c1a8c4da804730e0fad77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &86550072
@@ -337,13 +337,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4d405f03130954cac84ea7a257f07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab_Object: {fileID: 4361902931344892158, guid: 73ae1092080d8d64abe6f2d2fce957a4,
-    type: 3}
   navMeshSurface: {fileID: 646317306}
-  _waitTimeMin: 1
-  _waitTimeMax: 2
+  _waitTimeMin: 0
+  _waitTimeMax: 0
   _harvestableObjects:
-  - {fileID: 4361902931344892158, guid: 73ae1092080d8d64abe6f2d2fce957a4, type: 3}
+  - {fileID: 11400000, guid: 3e7c866c3b8f30c418d55e48e8847101, type: 2}
+  - {fileID: 11400000, guid: 5ff7562720e3af943a66354093885ee1, type: 2}
+  - {fileID: 11400000, guid: b3d39039d14297142a882721a1a0cf9e, type: 2}
+  - {fileID: 11400000, guid: 620e18617b66f32468928e23ee18c4aa, type: 2}
+  - {fileID: 11400000, guid: ea095df554c9cb048898ea83cbb6c68c, type: 2}
+  - {fileID: 11400000, guid: b29373dce6abb094899e78a8f21a196e, type: 2}
 --- !u!4 &86550074
 Transform:
   m_ObjectHideFlags: 0

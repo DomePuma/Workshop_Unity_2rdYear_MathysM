@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollectiblesObject : MonoBehaviour
+public class ScriptableHolder : MonoBehaviour
 {
     public ItemData itemData;
 }
