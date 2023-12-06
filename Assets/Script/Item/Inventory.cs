@@ -78,11 +78,11 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable() 
     {
-        InventoryEvent.SendItemToInventoryAction += AddItemToInventory;
+        ScriptableInventoryEvent.SendItemToInventoryAction += AddItemToInventory;
     }
 
     private void OnDisable() 
     {
-        InventoryEvent.SendItemToInventoryAction -= AddItemToInventory;
+        ScriptableInventoryEvent.SendItemToInventoryAction -= AddItemToInventory;
     }
 }

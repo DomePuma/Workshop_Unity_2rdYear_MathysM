@@ -25,11 +25,11 @@ public class GenerateItems : MonoBehaviour
 
     private void OnEnable() 
     {
-        InventoryEvent.SendIsInventoryOpen += CheckGenerationItems;
+        ScriptableInventoryEvent.SendIsInventoryOpen += CheckGenerationItems;
     }
     private void OnDisable() 
     {
-        InventoryEvent.SendIsInventoryOpen -= CheckGenerationItems;
+        ScriptableInventoryEvent.SendIsInventoryOpen -= CheckGenerationItems;
     }
 
     private void CheckGenerationItems(bool isInventoryOpen)

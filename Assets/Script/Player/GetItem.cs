@@ -9,12 +9,12 @@ public class GetItem : MonoBehaviour
     
     private void OnEnable() 
     {
-        InventoryEvent.SendIsListFullAction += CheckIsListFull;
+        ScriptableInventoryEvent.SendIsListFullAction += CheckIsListFull;
     }
 
     private void OnDisable() 
     {
-        InventoryEvent.SendIsListFullAction -= CheckIsListFull;
+        ScriptableInventoryEvent.SendIsListFullAction -= CheckIsListFull;
     }
 
     private void CheckIsListFull(bool isInventoryFull)

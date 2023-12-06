@@ -1285,7 +1285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140fc9552e22ba54eac81f67669e980a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList: []
   itemInventoryParent:
   - {fileID: 1493667338}
   - {fileID: 2004920355}
@@ -1296,6 +1295,7 @@ MonoBehaviour:
   - {fileID: 1350790639}
   - {fileID: 1891446224}
   inventory: {fileID: 1346254478}
+  itemList: []
   maxItemNumber: 8
 --- !u!4 &1546504250
 Transform:

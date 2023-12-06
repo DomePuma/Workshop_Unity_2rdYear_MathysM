@@ -11,12 +11,12 @@ public class ClickToMove : MonoBehaviour
     
     private void OnEnable() 
     {
-        InventoryEvent.SendIsInventoryOpen += CheckIsInventoryOpen;
+        ScriptableInventoryEvent.SendIsInventoryOpen += CheckIsInventoryOpen;
     }
 
     private void OnDisable() 
     {
-        InventoryEvent.SendIsInventoryOpen -= CheckIsInventoryOpen;
+        ScriptableInventoryEvent.SendIsInventoryOpen -= CheckIsInventoryOpen;
     }
 
     private void Awake() 

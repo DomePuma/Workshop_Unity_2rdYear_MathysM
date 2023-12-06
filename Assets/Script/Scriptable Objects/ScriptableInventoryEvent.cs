@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "new_" + nameof(ScriptableObject), menuName = "Events/Scriptable Event")]
-public class InventoryEvent : ScriptableObject
+[CreateAssetMenu(fileName = "new_" + nameof(ScriptableInventoryEvent), menuName = "Events/Scriptable Event")]
+public class ScriptableInventoryEvent : ScriptableObject
 {
     public static Action<ItemData> SendItemToInventoryAction;
     
